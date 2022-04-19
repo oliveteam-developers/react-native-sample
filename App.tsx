@@ -3,7 +3,7 @@ import { ThemeProvider } from '@rneui/themed';
 import { store } from './src/store';
 import { Provider } from 'react-redux';
 
-// Components
+// Containers
 import Home from './src/containers/Home';
 
 const App = () => {

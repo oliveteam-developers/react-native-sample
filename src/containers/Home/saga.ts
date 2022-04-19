@@ -1,7 +1,7 @@
 import { put, takeLatest, delay } from 'redux-saga/effects';
 import * as actions from  './actions';
 
-function* increaseRequest({ payload }: ReturnType<typeof actions.increaseRequest>) {
+function* increase({ payload }: ReturnType<typeof actions.increaseRequest>) {
   try {
     yield delay(2000);
     yield put(actions.increaseSuccess(payload));
@@ -11,5 +11,5 @@ function* increaseRequest({ payload }: ReturnType<typeof actions.increaseRequest
 }
 
 export default function* homeSaga() {
-  yield takeLatest(actions.increaseRequest, increaseRequest);
+  yield takeLatest(actions.increaseRequest, increase);
 }
