@@ -1,16 +1,20 @@
 import React from 'react';
 import { ThemeProvider } from '@rneui/themed';
-import { store } from './src/store';
 import { Provider } from 'react-redux';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+import { store } from './src/store';
 
 // Containers
-import Home from './src/containers/Home';
+import Routes from './src/routes';
+
+Icon.loadFont();
 
 const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider>
-        <Home />
+        <Routes />
       </ThemeProvider>
     </Provider>
   );
